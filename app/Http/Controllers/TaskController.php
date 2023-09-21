@@ -24,8 +24,12 @@ class TaskController extends Controller
     }
 
     // task 2 using react
+
     public function phoneCallIndex()
     {
+        // page will render with react component 
+        // react folder structure inside the resources/js/ dir
+
         return Inertia::render('PhoneCall');
     }
 }

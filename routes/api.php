@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\PhoneCallController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\PhoneCallApiController;
+use App\Http\Controllers\Api\UserApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::as('api.')->group(function () {
-    Route::get("/call/{phone_number}", [PhoneCallController::class, 'call'])->name('call');
+    Route::get("/call/{phone_number}", [PhoneCallApiController::class, 'call'])->name('call');
+    Route::post("users", [UserApiController::class, 'store'])->name('users.store');
 });

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PhoneCallController extends Controller
+class PhoneCallApiController extends Controller
 {
     public function call(Request $request)
     {
