@@ -1,0 +1,31 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-7f78196b.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/Pages/PhoneCall.tsx": {
+    "file": "assets/PhoneCall-522491d1.js",
+    "imports": [
+      "resources/js/app.tsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PhoneCall.tsx"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-7f78196b.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.tsx": {
+    "css": [
+      "assets/app-7f78196b.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/PhoneCall.tsx"
+    ],
+    "file": "assets/app-0f7a9724.js",
+    "isEntry": true,
+    "src": "resources/js/app.tsx"
+  }
+}
