@@ -1,24 +1,10 @@
-@props(['user' => null])
-
 <x-app-layout>
     {{-- task description --}}
     <x-alert>
-        crud operation perform by post method
+        crud operation with post method
     </x-alert>
 
     <div class="flex  flex-col justify-center items-center mt-10">
-
-        @if ($user)
-            <div class="alert alert-success w-[35rem] mb-2 flex flex-col">
-                <p class="font-bold text-xl">User has been added to the database</p>
-                <small>First Name: {{ $user->first_name }}</small>
-                <small>Last Name: {{ $user->last_name }}</small>
-                <small>Email: {{ $user->email }}</small>
-                <small>Phone Number: {{ $user->phone }}</small>
-                <small>Phone Number: {{ $user->image }}</small>
-            </div>
-        @endif
-
         <div class="w-[35rem] border border-gray-400 rounded-md p-10 flex flex-col gap-5">
             <p class="text-center text-xl font-bold">Add User With Post Method</p>
             <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data"

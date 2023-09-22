@@ -1,12 +1,10 @@
 <?php
 
-use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PhoneCallController;
 use App\Http\Controllers\CrudWithAjaxController;
 use App\Http\Controllers\CrudWithPostController;
-use App\Http\Controllers\TaskController;
-use App\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +39,4 @@ Route::prefix('task_1')->as('task1.')->group(function () {
 Route::resource('users', UserController::class)->only('index', 'store', 'update', 'destroy');
 
 // using react installed by laravel breeze inside the resources/js/ directory
-Route::get("/task_2", [TaskController::class, "phoneCallIndex"])->name("task2");
+Route::get("/task_2", [PhoneCallController::class, "phoneCallIndex"])->name("task2");

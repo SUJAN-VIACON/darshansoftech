@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Services\UserService;
 use App\Http\Requests\UserRequest;
 use App\DataTransferObjects\UserDto;
@@ -34,7 +33,7 @@ class UserApiController extends Controller
     {
         $user = $this->service->update($user, UserDto::formRequest($request));
         return UserResource::make(($user));
-    }   
+    }
 
     /**
      * Remove the specified resource from storage.

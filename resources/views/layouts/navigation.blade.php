@@ -21,7 +21,7 @@
                         </li>
                         <li>
                             <a href="{{ route('users.index') }}"
-                                class='whitespace-nowrap {{ request()->is('task_1/crud_with_post*') ? 'active' : '' }}'>
+                                class='whitespace-nowrap {{ request()->is('users*') ? 'active' : '' }}'>
                                 Users Table
                             </a>
                         </li>

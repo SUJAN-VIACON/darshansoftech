@@ -28,7 +28,8 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         $user = $this->service->store(UserDto::formRequest($request));
-        return view("crud_with_post.create", compact("user"));
+        session()->flash("success", "User has been created " . $user->toString());
+        return redirect(route("task1.crudWithPost.create"));
     }
 
     /**
@@ -38,7 +39,7 @@ class UserController extends Controller
     {
         $user = $this->service->update($user, UserDto::formRequest($request));
         session()->flash('success', 'User data has been updated');
-        return view("crud_with_post.edit", compact("user"));
+        return redirect(route("task1.crudWithPost.edit", $user->id));
     }
 
     /**

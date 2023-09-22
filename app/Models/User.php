@@ -3,10 +3,10 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -28,4 +28,16 @@ class User extends Authenticatable
     protected $casts = [
         'phone' => 'string',
     ];
+
+    // * helpers method
+
+    public function toString()
+    {
+        return "\n 
+        First Name: $this->first_name \n
+        Last Name: $this->first_name \n
+        Email: $this->email \n
+        Phone: $this->phone \n
+        Image: $this->image ";
+    }
 }
