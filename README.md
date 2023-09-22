@@ -1,6 +1,6 @@
 # Installation Process
 
-## step 1 (cline the project)
+## step 1 (clone the project)
 
 ```bash
 git clone https://github.com/SUJAN-VIACON/darshansoftech.git
