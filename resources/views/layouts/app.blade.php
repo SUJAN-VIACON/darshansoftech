@@ -20,6 +20,11 @@
 <body class="font-sans antialiased">
     <div class="min-h-screen">
         @include('layouts.navigation')
+        @if (session()->has('success'))
+            <x-alert class="my-3 alert-success w-[35rem] ml-5">
+                {{ session()->get('success') }}
+            </x-alert>
+        @endif
         <main class=" px-36 py-5">
             {{ $slot }}
         </main>

@@ -17,5 +17,5 @@ use App\Http\Controllers\Api\UserApiController;
 
 Route::as('api.')->group(function () {
     Route::get("/call/{phone_number}", [PhoneCallApiController::class, 'call'])->name('call');
-    Route::post("users", [UserApiController::class, 'store'])->name('users.store');
+    Route::apiResource("users", UserApiController::class)->only('store', 'update', 'destroy');
 });

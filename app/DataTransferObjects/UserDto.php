@@ -2,7 +2,7 @@
 
 namespace App\DataTransferObjects;
 
-use App\Http\Requests\UserStoreRequest;
+use App\Http\Requests\UserRequest;
 
 class UserDto
 {
@@ -11,11 +11,11 @@ class UserDto
         public readonly string $last_name,
         public readonly string $email,
         public readonly string $phone,
-        public readonly object $image,
+        public readonly object|null $image,
     ) {
     }
 
-    public static function formRequest(UserStoreRequest $request): UserDto
+    public static function formRequest(UserRequest $request): UserDto
     {
         return new self(
             first_name: $request->validated(key: 'first_name'),

@@ -1,17 +1,35 @@
 <div class="navbar bg-base-100 border-b">
     <div class="navbar-center flex">
         <ul class="menu menu-horizontal px-1">
-            <li tabIndex={0}>
+            <li tabIndex={0} class="active">
                 <details>
-                    <summary>Task 1</summary>
+                    <summary class="{{ request()->is('task_1*') ? 'bg-gray-500 text-white' : '' }}">Task 1</summary>
+
                     <ul class='p-2 top-7 border'>
-                        <li><a href="{{ route('task_1.subtask_1') }}" class='whitespace-nowrap'>Sub Task 1</a></li>
-                        <li><a href="{{ route('task_1.subtask_2') }}" class='whitespace-nowrap'>Sub Task 2</a></li>
-                        <li><a href="{{ route('task_1.subtask_3') }}" class='whitespace-nowrap'>Sub Task 3</a></li>
+                        <li>
+                            <a href="{{ route('task1.crudWithPost.create') }}"
+                                class='whitespace-nowrap {{ request()->is('task_1/crud_with_post*') ? 'active' : '' }}'>
+                                Add User With Post
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{ route('task1.crudWithAjax.create') }}"
+                                class='whitespace-nowrap {{ request()->is('task_1/crud_with_ajax*') ? 'active' : '' }}'>
+                                Add User With Ajax
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('users.index') }}"
+                                class='whitespace-nowrap {{ request()->is('task_1/crud_with_post*') ? 'active' : '' }}'>
+                                Users Table
+                            </a>
+                        </li>
                     </ul>
                 </details>
             </li>
-            <li><a href="{{route("task_2")}}">Task 2</a></li>
+
+            <li><a href="{{ route('task2') }}">Task 2</a></li>
         </ul>
     </div>
 </div>

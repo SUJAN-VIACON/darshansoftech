@@ -15,12 +15,14 @@
                 <small>Last Name: {{ $user->last_name }}</small>
                 <small>Email: {{ $user->email }}</small>
                 <small>Phone Number: {{ $user->phone }}</small>
+                <small>Phone Number: {{ $user->image }}</small>
             </div>
         @endif
 
         <div class="w-[35rem] border border-gray-400 rounded-md p-10 flex flex-col gap-5">
             <p class="text-center text-xl font-bold">Add User With Post Method</p>
-            <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data" class="flex flex-col gap-5">
+            <form method="POST" action="{{ route('users.store') }}" enctype="multipart/form-data"
+                class="flex flex-col gap-5">
                 @csrf
                 <!-- first name -->
                 <div>
@@ -55,10 +57,9 @@
                 </div>
 
                 <!-- file -->
-
                 <div>
                     <x-input-label for="image" :value="__('Upload Image')" />
-                    <x-file-input id="image" type="text" name="image" :value="old('image')"  autofocus
+                    <x-file-input id="image" type="text" name="image" :value="old('image')" autofocus
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('image')" class="mt-2" />
                 </div>
