@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Services\UserService;
-use App\DataTransferObjects\UserDto;
 use App\Http\Requests\UserRequest;
+use App\DataTransferObjects\UserDto;
 
 class UserController extends Controller
 {
@@ -45,6 +44,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(User $user)
     {
         $this->service->delete($user);
