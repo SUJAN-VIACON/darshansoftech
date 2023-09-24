@@ -1,7 +1,5 @@
 <x-app-layout>
 
-
-
     <h1 class="mb-3 font-bold">
         All USERS
     </h1>
@@ -68,5 +66,9 @@
                 @endforelse
             </tbody>
         </table>
+    </div>
+
+    <div class="my-5">
+        {{ $users->links() }}
     </div>
 </x-app-layout>
