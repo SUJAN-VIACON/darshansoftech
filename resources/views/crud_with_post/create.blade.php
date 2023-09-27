@@ -13,7 +13,7 @@
                 <!-- first name -->
                 <div>
                     <x-input-label for="first_name" :value="__('First Name')" />
-                    <x-text-input id="first_name" type="text" name="first_name" :value="old('first_name')" required autofocus
+                    <x-text-input id="first_name" type="text" name="first_name" required autofocus
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
                 </div>
@@ -21,7 +21,7 @@
                 <!-- last name -->
                 <div>
                     <x-input-label for="last_name" :value="__('Last Name')" />
-                    <x-text-input id="last_name" type="text" name="last_name" :value="old('last_name')" required autofocus
+                    <x-text-input id="last_name" type="text" name="last_name" required autofocus
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
                 </div>
@@ -29,7 +29,7 @@
                 <!-- email -->
                 <div>
                     <x-input-label for="email" :value="__('Email')" />
-                    <x-text-input id="email" type="text" name="email" :value="old('email')" required autofocus
+                    <x-text-input id="email" type="text" name="email" required autofocus
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
@@ -37,7 +37,7 @@
                 <!-- phone -->
                 <div>
                     <x-input-label for="phone" :value="__('Phone Nnmber')" />
-                    <x-text-input id="phone" type="text" name="phone" :value="old('phone')" required autofocus
+                    <x-text-input id="phone" type="text" name="phone" required autofocus
                         autocomplete="username" />
                     <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                 </div>
@@ -45,8 +45,7 @@
                 <!-- file -->
                 <div>
                     <x-input-label for="image" :value="__('Upload Image')" />
-                    <x-file-input id="image" type="text" name="image" :value="old('image')" autofocus
-                        autocomplete="username" />
+                    <x-file-input id="image" type="text" name="image" autofocus autocomplete="username" />
                     <x-input-error :messages="$errors->get('image')" class="mt-2" />
                 </div>
 
